@@ -124,3 +124,98 @@ Isso iniciará o servidor na porta padrão 8000.
 ### Passo 2: Acesse o aplicativo no navegador
 Abra um navegador da web e acesse `http://localhost:8000` (ou a porta em que o servidor está sendo executado). Se você vir a página inicial do Laravel, isso significa que o projeto foi criado corretamente e está funcionando.
 
+# <img align="center" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> Manual de Configuração do Front-End Laravel com React JS usando Inertia JS
+
+Este manual fornece um guia passo a passo para configurar o front-end Laravel com React JS usando Inertia JS. Ele abrange desde a instalação das dependências até a configuração inicial do projeto. Siga as instruções abaixo:
+
+## 1. Configuração do Projeto Laravel
+
+### Passo 1: Crie um novo projeto Laravel
+Se você ainda não possui um projeto Laravel, siga as etapas descritas no "Manual de Criação de Projeto Laravel" para criar um novo projeto Laravel.
+
+### Passo 2: Instale o Inertia JS
+Dentro do diretório do projeto Laravel, execute o seguinte comando para instalar o Inertia JS:
+```bash
+composer require inertiajs/inertia-laravel
+```
+
+### Passo 3: Configure o arquivo de rotas
+Abra o arquivo `routes/web.php` e substitua as rotas existentes pelo seguinte código de exemplo:
+```php
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use Inertia\Inertia;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+```
+
+### Passo 4: Crie um controlador
+Crie um controlador para lidar com as solicitações do Inertia. No terminal, execute o seguinte comando para criar o controlador:
+```bash
+php artisan make:controller HomeController
+```
+
+Em seguida, abra o arquivo `app/Http/Controllers/HomeController.php` e atualize-o com o seguinte código de exemplo:
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Inertia\Inertia;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        return Inertia::render('Home');
+    }
+}
+```
+
+## 2. Configuração do Front-End React JS
+
+### Passo 1: Instale as dependências do React JS
+No terminal, navegue até o diretório do projeto Laravel e execute o seguinte comando para instalar as dependências do React JS:
+```bash
+npm install react react-dom @inertiajs/inertia @inertiajs/inertia-react
+```
+
+### Passo 2: Crie os componentes React
+Dentro do diretório do projeto, crie um diretório chamado `resources/js/Pages`. Em seguida, crie um arquivo `Home.jsx` dentro do diretório `Pages` com o seguinte código de exemplo:
+```jsx
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to the Home Page</h1>
+    </div>
+  );
+};
+
+export default Home;
+```
+
+### Passo 3: Atualize o arquivo de rotas
+Abra o arquivo `routes/web.php` novamente e atualize o controlador para renderizar o componente React JS usando o Inertia. Atualize o código do controlador da seguinte maneira:
+```php
+public function index()
+{
+    return Inertia::render('Home', [
+        'name' => 'John Doe',
+        'age' => 25,
+    ]);
+}
+```
+
+### Passo 4: Atualize o arquivo de visualização
+Dentro do diretório `resources/views`, crie um novo arquivo chamado `app.blade.php`. Adicione o seguinte código de exemplo ao arquivo:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name
