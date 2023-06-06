@@ -1,4 +1,4 @@
-# Configuração do Ambiente de Desenvolvimento com Docker
+# <img align="center" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"> Configuração do Ambiente de Desenvolvimento com Docker
 
 Este manual fornece um guia passo a passo para configurar uma máquina para o desenvolvimento usando Docker. Ele inclui desde a instalação do Docker até o teste de funcionamento. Siga as instruções abaixo:
 
@@ -63,7 +63,7 @@ exit
 ```
 Isso o levará de volta ao prompt de comando do seu sistema.
 
-# Criação de Projeto Laravel
+# <img align="center" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"> Criação de Projeto Laravel
 
 Este manual fornece um guia passo a passo para criar um projeto Laravel. Ele abrange desde a instalação do Laravel até a configuração inicial do projeto. Siga as instruções abaixo:
 
@@ -124,4 +124,3 @@ Isso iniciará o servidor na porta padrão 8000.
 ### Passo 2: Acesse o aplicativo no navegador
 Abra um navegador da web e acesse `http://localhost:8000` (ou a porta em que o servidor está sendo executado). Se você vir a página inicial do Laravel, isso significa que o projeto foi criado corretamente e está funcionando.
 
-Parabéns! Você concl
