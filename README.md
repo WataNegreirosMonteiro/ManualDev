@@ -126,7 +126,7 @@ Abra um navegador da web e acesse `http://localhost:8000` (ou a porta em que o s
 
 # <img align="center" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> Manual de Configuração do Front-End Laravel com React JS usando Inertia JS
 
-Este manual fornece um guia passo a passo para configurar o front-end Laravel com React JS usando Inertia JS. Ele abrange desde a instalação das dependências até a configuração inicial do projeto. Siga as instruções abaixo:
+Este manual fornece um guia passo a passo para configurar o front-end Laravel com React JS usando [Inertia JS](https://inertiajs.com/). Ele abrange desde a instalação das dependências até a configuração inicial do projeto. Siga as instruções abaixo:
 
 ## 1. Configuração do Projeto Laravel
 
@@ -215,7 +215,7 @@ public function index()
 Dentro do diretório `resources/views`, crie um novo arquivo chamado `app.blade.php`. Adicione o seguinte código de exemplo ao arquivo:
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name
