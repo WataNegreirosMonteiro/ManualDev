@@ -218,4 +218,93 @@ Dentro do diretório `resources/views`, crie um novo arquivo chamado `app.blade.
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name
+    <meta name...
+ ```
+ 
+# <img align="center" height="80" width="80" src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg)"> Configuração do Front-End React no Laravel com Tailwind CSS
+
+Este manual fornece um guia passo a passo para configurar o front-end que usa React no Laravel com Tailwind CSS. Ele abrange desde a instalação das dependências até a configuração inicial do projeto. Siga as instruções abaixo:
+
+## 1. Configuração do Projeto Laravel
+
+### Passo 1: Crie um novo projeto Laravel
+Se você ainda não possui um projeto Laravel, siga as etapas descritas no "Manual de Criação de Projeto Laravel" para criar um novo projeto Laravel.
+
+### Passo 2: Instale as dependências do React JS
+Dentro do diretório do projeto Laravel, execute o seguinte comando para instalar as dependências do React JS:
+```bash
+npm install react react-dom
+```
+
+### Passo 3: Instale o Tailwind CSS
+Execute o seguinte comando para instalar o Tailwind CSS:
+```bash
+npm install tailwindcss
+```
+
+### Passo 4: Crie o arquivo de configuração do Tailwind CSS
+No terminal, execute o seguinte comando para criar o arquivo de configuração do Tailwind CSS:
+```bash
+npx tailwindcss init
+```
+
+### Passo 5: Configure o arquivo de estilos
+Abra o arquivo `resources/css/app.css` e substitua todo o seu conteúdo pelo seguinte código:
+```css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```
+
+### Passo 6: Importe o arquivo de estilos no arquivo de layout
+Abra o arquivo `resources/views/layouts/app.blade.php` e adicione a seguinte linha de código na seção `<head>`:
+```html
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+```
+
+### Passo 7: Compile os estilos
+No terminal, execute o seguinte comando para compilar os estilos do Tailwind CSS:
+```bash
+npx mix
+```
+
+## 2. Configuração do Front-End React com Tailwind CSS
+
+### Passo 1: Crie os componentes React
+Dentro do diretório `resources/js`, crie um novo diretório chamado `components`. Em seguida, crie um componente React chamado `ExampleComponent.jsx` dentro do diretório `components` com o seguinte código de exemplo:
+```jsx
+import React from 'react';
+
+const ExampleComponent = () => {
+    return (
+        <div className="bg-blue-500">
+            <h1 className="text-white">Hello, Tailwind CSS!</h1>
+        </div>
+    );
+};
+
+export default ExampleComponent;
+```
+
+### Passo 2: Atualize o arquivo de rotas
+Abra o arquivo `routes/web.php` e substitua as rotas existentes pelo seguinte código de exemplo:
+```php
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+
+Route::get('/', function () {
+    return Inertia::render('Welcome');
+});
+```
+
+### Passo 3: Atualize o arquivo de visualização
+Dentro do diretório `resources/views`, crie um novo arquivo chamado `welcome.blade.php`. Adicione o seguinte código de exemplo ao arquivo:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title
